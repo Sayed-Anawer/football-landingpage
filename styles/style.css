@@ -1,0 +1,255 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+/* Common styles */
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+    margin:8px 0;
+}
+/* Header Section style */
+header{
+    width: 100%;
+    height:620px;
+    background-color: #2D25A0;
+}
+.header-title{
+    color: #FFFFFF;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 80px;
+}
+/* Aniamtion  */
+.header-title{
+    position: relative;
+    animation-name: topslide;
+    animation-duration: 1.5s;
+}
+@keyframes topslide {
+    0%   { left:0; top:-200px;}
+    100% { left:0px; top:0px;}
+  }
+  .banner-image> img{
+    position: relative;
+    animation-name: rightslide;
+    animation-duration: 1.2s;
+  }
+  @keyframes rightslide {
+    0%   { right:-500px; top:0;}
+    100% { right:0; top:0px;}
+  }
+
+.watch-btn{
+    width: 170px;
+    height: 44px;
+    padding: 12px 24px 0;
+    font-size: 18px;
+    background: #E02C6D;
+    border: 2px solid #E02C6D;
+    cursor: pointer;
+    text-align: center;
+}
+.watch-btn >a{
+    margin-top: 16px;
+    font-weight: lighter;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+.watch-btn:hover{
+ font-size: 22px;
+}
+.fa-arrow-right{
+    margin: 0 8px;
+}
+.banner-image> img{
+    width: 556.01px;
+    height: 438px;
+    cursor: pointer;
+    transition: 0.8s ease-in;
+}
+.banner-image>img:hover{
+    transform: scale(0.5, 0.5) rotate(-360deg);
+}
+
+/* Players Section design */
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 27px;
+    grid-column-gap: 30px;
+}
+.player{
+    width: 330px;
+    height: auto;
+    box-shadow: 0px 10.34229px 20.3557px rgba(0, 0, 0, 0.05);
+}
+.player-img >img{
+    width: 300px;
+    height: 256px;
+    padding: 15px;
+}
+.player-name{
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    padding:0 15px;
+}
+.player-info{
+    font-size: 16px;
+    color: #6C6C6C;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding:0 15px 33px;
+}
+
+/* Old Memories Design */
+.historycal-player{
+    width: 330px;
+    height: 650px;
+    box-shadow: 0px 10.34229px 20.3557px rgba(0, 0, 0, 0.05);
+    padding: 0 15px;
+}
+.title{
+    font-weight: bold;
+    font-size: 48px;
+    color: #0A0826;
+}
+.round-img{
+    border-radius: 50%;
+}
+.hisrorycal-player > h4{
+    opacity: 0.8;
+}
+
+/* Copa America Matches design */
+.match{
+    width: 55%;
+}
+.team-info{
+    width: 100%;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgb(44 62 80 / 50%);
+}
+.winner-info{
+    display: flex;
+    align-items: center;
+}
+.score{
+    color: #b1b1b1;
+}
+
+/* Footer Section */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-img>img{
+    width: 488px;
+    height: 120px;  
+}
+.social-icons{
+    display: flex;
+}
+.icon{
+    margin: 20px 15px 20px 0;
+    color: #969BAB;
+    font-size: 25px;
+}
+.copyright>p{
+font-size: 18px;
+font-weight: lighter;
+text-align: center;
+margin-bottom: 65px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width:688px) {
+    header{
+        width: 100vw;
+        height: 695px
+    }
+    .container{
+        flex-direction: column;
+    }
+    .header-title{
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .banner-image>img{
+        margin-top:20px;
+        width: 329px;
+        height: 259.17px;
+    }
+    .wrapper{
+        justify-content: center;
+        align-items:center ;
+    }
+    .players{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .title{
+        font-weight: bold;
+        font-size: 26px;
+        color: #E02C6D;
+    }
+    .match{
+        width: 55%;
+        height: auto;
+       margin: 0 auto;
+       text-align: center;
+       line-height: 20px;
+    }
+    .upcoming-title{
+        font-size: 16px;
+    }
+    .team-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .match-time{
+       color: #6C6C6C;
+       font-size: 14px;
+    }
+
+    .team-logo>img{
+        width: 72px;
+        height: 56px;
+    }
+    footer{
+        margin-top:50px;
+    }
+    .footer-img>img{
+        width: 275px;
+        height: 70px;  
+    }
+    
+}
