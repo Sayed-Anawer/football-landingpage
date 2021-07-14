@@ -176,7 +176,9 @@ footer{
 .social-icons{
     display: flex;
 }
-.icon{
+
+.icon > a{
+    text-decoration: none;
     margin: 20px 15px 20px 0;
     color: #969BAB;
     font-size: 25px;
@@ -251,5 +253,4 @@ margin-bottom: 65px;
         width: 275px;
         height: 70px;  
     }
-    
 }
